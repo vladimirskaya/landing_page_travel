@@ -332,7 +332,6 @@ img {
 
 .places__view-all {
     padding-right: 59px;
-    font-weight: normal;
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
@@ -363,7 +362,7 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(21, 24, 36, 0.4);
-    
+
     position: absolute;
     top: 0;
     left: 0;
@@ -404,6 +403,7 @@ img {
 .places__card-pic_size_lg {
     height: 354px;
 }
+
 .places__card-pic_size_small {
     height: 283px;
 }
@@ -417,4 +417,158 @@ img {
     z-index: 4;
 }
 
-/* Places's style end */
+/* Places's styles end */
+
+/* Tours'styles start  */
+
+.tours {
+    margin-bottom: 139px;
+}
+
+.tours__tour {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 108px;
+    align-items: center;
+    margin-bottom: 77px;
+}
+
+.tour__info {
+    padding-left: 47px;
+}
+
+.tour__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 85px;
+}
+
+.tour__desc {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 58px;
+}
+
+.tour__more {
+    padding-right: 59px;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #006DFE;
+    background: url(../images/svg/arror.svg) no-repeat right center;
+}
+
+.tour__more:hover,
+.tour__more:focus {
+    opacity: .65;
+}
+
+/* Tours'styles end  */
+
+
+/* Top places styles start */
+.top {
+    margin-bottom: 86px;
+}
+
+.top__title {
+    margin-bottom: 54px;
+}
+
+.top__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 57px;
+}
+
+.top__card-pic {
+    position: relative;
+    margin-bottom: 45px;
+    overflow: hidden;
+}
+
+.top__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.top__card-thumb {
+    transition: 0.15s all;
+}
+
+.top__card-pic:hover .top__card-thumb {
+    transform: scale(1.05);
+} 
+
+.top__card-stats {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba(21, 24, 36, 0.6);
+    padding: 16px 25px;
+}
+
+.top__card-title {
+    margin: 0 auto 0 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+   
+}
+
+.top__card-likes {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    padding-right: 20px;
+    background: url(../images/svg/heart-icon.svg) no-repeat right;
+    margin-right: 14px;
+}
+
+.top__card-comments {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    padding-right: 23px;
+    background:url(../images/svg/comment-icon.svg) no-repeat right;
+}
+
+.top__card-desc {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 31px;
+}
+
+.top__card-more {
+    width: 118px;
+    padding: 12px 19px;
+    margin: auto 0 0 0 ;
+    background-color: #1B7DFF;
+    border: 0;
+    
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+
+.top__card-more:hover,
+.top__card-more:focus,
+.top__card-more:active {
+    background: #0f4b9b;
+    ;
+} 
+
+/* Top places styles end */
