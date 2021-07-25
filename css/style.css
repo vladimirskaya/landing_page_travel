@@ -91,7 +91,6 @@ img {
     left: 0;
 }
 
-
 /* Header's style stert */
 .header {
     /*background-color: black;*/
@@ -186,6 +185,7 @@ img {
 .intro {
     min-height: 100vh;
     background: url('../images/Hero.jpg') no-repeat center;
+    border: none;
     background-size: cover;
 
     padding-top: 263px;
@@ -317,6 +317,8 @@ img {
 
 .benefits__card-thumb {
     display: block;
+    width: 66px;
+    height: 65px;
 }
 
 .benefits__card-title {
@@ -391,7 +393,7 @@ img {
 .places__cards {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-gap: 10px;
+    grid-column-gap: 10px;
 }
 
 .places__card {
@@ -438,7 +440,7 @@ img {
 
 .places__card-pic {
     width: 100%;
-
+    object-fit: cover;
     transition: .15s all;
 }
 
@@ -470,7 +472,7 @@ img {
 .tours__tour {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0 108px;
+    grid-column-gap: 108px;
     align-items: center;
     margin-bottom: 77px;
 }
@@ -525,8 +527,9 @@ img {
 
 .top__cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 57px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 57px;
+    grid-row-gap: 57px;
 }
 
 .top__card-pic {
@@ -538,6 +541,7 @@ img {
 .top__card {
     display: flex;
     flex-direction: column;
+    grid-column: span 2;
 }
 
 .top__card-thumb {
@@ -658,10 +662,13 @@ img {
 }
 
 .footer__logo {
-    width: 50%;
+    padding-left: 15px;
+    width: 40%;
 }
 
-.footer__logo-pic {}
+.footer__logo-pic {
+    width: 150px;
+}
 
 .footer__nav {
     display: flex;
@@ -696,7 +703,46 @@ img {
 
 /* Medeia start  */
 
+@media screen and (max-width: 920px) {
+    .search-form__field {
+        margin-bottom: 30px;
+    }
+
+    .benefits {
+        margin-bottom: 75px;
+    }
+
+    .benefits__wrap {
+        box-shadow: none;
+    }
+
+    .benefits__title {
+        padding: 55px 15px;
+    }
+
+    .benefits__cards {
+        padding: 0 15px;
+        grid-column-gap: 35px;
+    }
+
+    .benefits__card {
+        margin-bottom: 25px;
+    }
+
+    .place__card_size_lg {
+        grid-column: span 6;
+    }
+
+    .place__card_size_small {
+        grid-column: span 6;
+    }
+}
+
 @media screen and (max-width: 767px) {
+    .header__wrapper {
+        padding-top: 20px;
+    }
+
     .header__burger {
         display: block;
     }
@@ -704,18 +750,19 @@ img {
     .header__nav {
         position: fixed;
         top: 0;
-        left: 0;
+        right: 0;
         z-index: 100;
         width: 100%;
         height: 100%;
         padding: 75px;
         background-color: #000;
         transform: translateX(100%);
-        transition: 300ms all linear;;
+
     }
 
     .header__nav_active {
         transform: translateX(0);
+        transition: 300ms all linear;
     }
 
     .header__item {
@@ -750,14 +797,179 @@ img {
         height: 2px;
         background-color: #fff;
     }
-    
+
     .header__nav-close-line:first-child {
         transform: translateY(-50%) rotate(45deg);
     }
 
     .header__nav-close-line:last-child {
-        transform: translateY(-50%) rotate(-45deg); 
+        transform: translateY(-50%) rotate(-45deg);
     }
+
+    .intro__title {
+
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    .search-form__field {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .search-form__submit {
+        padding: 10px 39px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .benefits__title {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .benefits_card {
+        grid-column: span 3;
+    }
+
+    .section-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .places {
+        margin-bottom: 70px;
+    }
+
+    .places__caption {
+        margin-bottom: 20px;
+    }
+
+    .places__title {
+        margin-bottom: 20px;
+    }
+
+    .places__card-title {
+        font-size: 30px;
+    }
+
+    .tours {
+        margin-bottom: 70px;
+    }
+
+    .tours__tour {
+        grid-column-gap: 35px;
+        margin-bottom: 50px;
+    }
+
+    .tour__title {
+        margin-bottom: 35px;
+    }
+
+    .tour-pic {
+        height: 100%;
+    }
+
+    .tour__info {
+        padding-left: 0;
+    }
+
+    .tour__desc {
+        margin-bottom: 15px;
+    }
+
+    .top {
+        margin-bottom: 70px;
+    }
+
+    .top__cards {
+        grid-column-gap: 30px;
+        grid-row-gap: 55px;
+    }
+
+    .top__card {
+        grid-column: span 3;
+    }
+
+    .top__card-pic {
+        margin-bottom: 25px;
+    }
+
+    .top__card-thumb {
+        /* height: 60%; */
+
+    }
+
+    .top__card-stats {
+        padding: 12px 5px;
+    }
+
+    .top__card-title {
+        width: 100%;
+    }
+    .footer {
+        padding: 50px 0;
+    }
+
+    .footer__item {
+        flex-direction: column;
+    }
+
+    .footer__logo {
+        margin-bottom: 20px;
+    }
+
+    .footer__logo-pic {
+        width: 100px;
+    }
+
+    .footer__nav {
+        margin: 0 -5px 0;
+        width: 100%;
+    }
+
+    .footer__menu {
+        margin: 5px;
+        width: calc((100% - 3 * 10px)/3);
+    }
+
+    .footer__menu-title {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .footer__menu-link {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+
 }
 
+
+
 /* Media end  */
+
+/* some animetion style  */
+/* .example {
+    position: relative;
+}
+
+.my-element {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    padding: 1em;
+    background:url(../images/tokyo.jpg) center no-repeat tomato;
+    color:#fff;
+    font-size: 2em;
+    text-align: center;
+    
+}
+.my-element img {
+    width: 100%;
+    object-fit: cover;
+} */

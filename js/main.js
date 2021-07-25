@@ -23,3 +23,30 @@
     })
 
 }());
+
+
+// // скрипт для анимации
+// const elem = document.querySelector('.my-element');
+// let startTime = null,
+//     endPos = 500, // in px
+//     duration = 2000; // in ms
+
+// function render(time) {
+//     console.log('вызов рендера');
+//     if (time === undefined) {
+//         time = new Date().getTime();
+//     }
+    
+//     if (time === null) {
+//         startTime = time;
+//     }
+
+//     elem.style.left = ((time - startTime) / duration * endPos % endPos) + 'px';
+
+// }
+// elem.addEventListener('click', () => {
+//     (function animationLoop() {
+//         render();
+//         requestAnimationFrame(animationLoop, elem);
+//     })();
+// });
